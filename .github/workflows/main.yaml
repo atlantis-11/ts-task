@@ -1,0 +1,14 @@
+name: Main Workflow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x script.sh
+      - run: ./script.sh
